@@ -13,7 +13,7 @@ COPY . /node
 COPY .next /node/.next
 
 WORKDIR /node
-# RUN yarn --production
+RUN yarn --production
 
 EXPOSE 3000
 STOPSIGNAL SIGINT

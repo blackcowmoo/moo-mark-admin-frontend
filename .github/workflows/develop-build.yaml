@@ -40,18 +40,5 @@ jobs:
         env:
           CI: true
 
-      - name: Remove node_modules
-        run: rm -rf node_modules
-
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ./node_modules
-          key: node-production-${{ hashFiles('yarn.lock') }}
-          restore-keys: node-production-
-
-      - name: Remove node_modules
-        run: yarn --production
-
       - name: Build docker
         run: docker build -t admin-frontend ./
