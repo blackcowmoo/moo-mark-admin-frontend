@@ -1,20 +1,22 @@
 import React from 'react';
 import { Layout } from 'antd';
-import AdminSider from './AppSider';
+import AdminSider from './AdminSider';
 import { GithubOutlined } from '@ant-design/icons';
 const { Footer, Content, Header } = Layout;
+
+import style from './adminSider.module.scss';
 
 const AdminLayout: React.FunctionComponent = ({ children }) => {
   //const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <Layout>
+    <Layout className={style.appLayout}>
       <AdminSider />
-      <Layout className="site-layout" style={{ marginLeft: 200 }}>
-        <Header className="site-layout-background" style={{ padding: 0 }}>
+      <Layout className="site-layout" style={{ marginLeft: 200, backgroundColor: '#DCCEAC' }}>
+        <Header className="site-layout-background" style={{ padding: '5px', backgroundColor: '#FCFEFC' }}>
           {' '}
           currentPAge{' '}
         </Header>
-        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}> {children}</Content>
+        <Content style={{padding: '5px', margin: '16px 16px', overflow: 'initial', backgroundColor: '#FCFEFC' }}> {children}</Content>
         <Footer>
           mooMarkAdmin |{' '}
           <a href="https://github.com/blackcowmoo/moo-mark" target="_blank" rel="noreferer noopener">

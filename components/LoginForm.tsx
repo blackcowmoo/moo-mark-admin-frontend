@@ -2,6 +2,8 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { Form, Input, Button } from 'antd';
 import Link from 'next/link';
 
+import style from './loginForm.module.scss';
+
 const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
   const submit = () => {
     console.log('submit');
@@ -22,7 +24,7 @@ const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
     setIsLoggedIn(true);
   }, [id, password]);
   return (
-    <Form onFinish={onSubmitForm}>
+    <Form className={style.loginForm} onFinish={onSubmitForm}>
       <div>
         <label htmlFor="user-id">아이디</label>
         <br />
@@ -36,7 +38,7 @@ const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
         <Input name="user-password" type="password" value={password} onChange={onChangePassword} required />
       </div>
 
-      <Button type="primary" htmlType="submit" loading={false}>
+      <Button className="logout-button" type="primary" htmlType="submit" loading={false}>
         로그인
       </Button>
     </Form>

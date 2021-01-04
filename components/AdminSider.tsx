@@ -5,29 +5,32 @@ import { BarChartOutlined, UserOutlined, HomeOutlined } from '@ant-design/icons'
 
 import UserProfile from './UserProfile';
 import LoginForm from './LoginForm';
+
+import style from './adminSider.module.scss';
+
 interface Props {
   setIsLoggedIn: boolean;
 }
 
 const { Sider } = Layout;
-
 const AdminSider: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   return (
-    <Layout>
-      <Sider style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}>
+    <Layout className={style.customlayout}>
+      {/* <Sider style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}> */}
+      <Sider className={style.adminSider} style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}>
         <div className="logo" />
         {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['dashboard']}>
-          <Menu.Item key="home" icon={<HomeOutlined />}>
+        <Menu theme = "dark" className="sider-menu" style={{ backgroundColor: 'transparent' }} mode="inline" defaultSelectedKeys={['dashboard']}>
+          <Menu.Item className="custom" key="home" icon={<HomeOutlined />}>
             <Link href="/">home</Link>
           </Menu.Item>
 
-          <Menu.Item key="dashboard" icon={<BarChartOutlined />}>
+          <Menu.Item  key="dashboard" icon={<BarChartOutlined />}>
             <Link href="/dashboard">dashBoard</Link>
           </Menu.Item>
 
-          <Menu.Item key="userInfo" icon={<UserOutlined />}>
+          <Menu.Item  key="userInfo" icon={<UserOutlined />}>
             userInfo
           </Menu.Item>
         </Menu>

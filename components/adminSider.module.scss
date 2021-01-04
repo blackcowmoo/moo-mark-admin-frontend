@@ -1,0 +1,40 @@
+$selected-menu-color: #13856C;
+$document-background : #FCFEFC;
+$page-background: #BBB2A3;
+$button-color: #DCCEAC;
+$menu-color: #1F1C1E;
+
+.adminSider {
+  background-color: $menu-color;
+  &:hover{
+    background-color: $menu-color;
+  }
+  overflow: 'auto';
+  height: '100vh';
+  position: 'fixed';
+  left: 0; 
+  .ant-menu.ant-menu-light  .ant-menu-item.custom {
+    background-color: $menu-color
+  }
+  .sider-menu{
+    background-color: transparent;
+  }
+}
+
+.appLayout {
+  .site-layout{
+    background-color: $document-background;
+  }
+  
+  
+}
+
+.customlayout {
+  
+  background-color: $menu-color;
+}
+.site-layout {
+  style {
+    background-color: $menu-color;
+  }
+}
