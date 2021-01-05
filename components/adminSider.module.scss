@@ -5,9 +5,7 @@ $button-color: #DCCEAC;
 $menu-color: #1F1C1E;
 $layout-font-color: #FCFEFC;
 
-.adminSider {
-  background-color: $menu-color;
-}
+
 
 .appLayout {
   .site-layout{
@@ -18,8 +16,15 @@ $layout-font-color: #FCFEFC;
 }
 
 .customlayout {
-  & > *{
+  .sider {
     background-color: $menu-color;
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    .menuContainer {
+      background-color: transparent;
+    }
   }
   
 }

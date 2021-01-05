@@ -12,45 +12,37 @@ import style from './adminSider.module.scss';
 
 const { Sider } = Layout;
 
-const siderStyle: React.CSSProperties = {
-  overflow: 'auto',
-  height: '100vh',
-  position: 'fixed',
-  left: 0,
-};
-
 const AdminSider: React.FC = ({}) => {
   const router: NextRouter = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  console.log(router.pathname.split('/')[1]);
   return (
     <Layout className={style.customlayout}>
-      {/* <Sider style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}> */}
-      <Sider className={style.adminSider} style={siderStyle}>
+      <Sider className={style.sider}>
         <div className="logo" />
         {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
-        <Menu theme="dark" className="sider-menu" style={{ backgroundColor: 'transparent' }} mode="inline" selectedKeys={[router.pathname.split('/')[1]]}>
-          <Menu.Item className="custom" key="" icon={<HomeOutlined />}>
+        <Menu theme="dark" className={style.menuContainer} mode="inline" selectedKeys={[router.pathname]}>
+          <Menu.Item className="custom" key="/" icon={<HomeOutlined />}>
             <Link href="/">Home</Link>
           </Menu.Item>
 
-          <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
+          <Menu.Item key="/dashboard" icon={<DashboardOutlined />}>
             <Link href="/dashboard">DashBoard</Link>
           </Menu.Item>
 
-          <Menu.Item key="userInfo" icon={<UserOutlined />}>
-            UserInfo
+          <Menu.Item key="/user" icon={<UserOutlined />}>
+          <Link href="/user">User</Link>
           </Menu.Item>
 
-          <Menu.Item key="api" icon={<ApiOutlined />}>
+          <Menu.Item key="/request" icon={<ApiOutlined />}>
             <Link href="/request">API request</Link>
           </Menu.Item>
-          <Menu.Item key="chart" icon={<BarChartOutlined />}>
-            Chart
+
+          <Menu.Item key="/charts" icon={<BarChartOutlined />}>
+            <Link href="/charts">Charts</Link>
           </Menu.Item>
 
-          <Menu.Item key="setting" icon={<SettingOutlined />}>
-            Setting
+          <Menu.Item key="/setting" icon={<SettingOutlined />}>
+            <Link href="/setting">Setting</Link>
           </Menu.Item>
         </Menu>
       </Sider>
