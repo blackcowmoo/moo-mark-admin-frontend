@@ -1,0 +1,12 @@
+@import './adminSider.module.scss';
+
+.userProfile{
+  background-color: $menu-color;
+  .profileName{
+    color: $layout-font-color;
+  }
+  .profileButton{
+    background-color: $button-color;
+  }
+  
+}
