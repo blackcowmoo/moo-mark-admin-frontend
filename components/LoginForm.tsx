@@ -38,7 +38,7 @@ const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
         <Input name="user-password" type="password" value={password} onChange={onChangePassword} required />
       </div>
 
-      <Button className="logout-button" type="primary" htmlType="submit" loading={false}>
+      <Button className={style.loginButton} type="primary" htmlType="submit" loading={false}>
         로그인
       </Button>
     </Form>
