@@ -1,13 +1,10 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Form, Input, Button } from 'antd';
-import Link from 'next/link';
+
 
 import style from './loginForm.module.scss';
 
 const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
-  const submit = () => {
-    console.log('submit');
-  };
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
 
