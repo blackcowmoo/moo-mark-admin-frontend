@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { Card, Avatar, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 

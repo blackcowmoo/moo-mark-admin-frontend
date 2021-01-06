@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 import AdminSider from './AdminSider';
