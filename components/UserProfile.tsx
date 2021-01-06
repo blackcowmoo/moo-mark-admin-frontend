@@ -1,17 +1,17 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { Card, Avatar, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
 import style from './userProfile.module.scss';
 
 const UserProfile: React.FC<any> = ({ setIsLoggedIn }) => {
-  console.log(typeof setIsLoggedIn);
   const onLogOut = useCallback(() => {
     setIsLoggedIn(false);
   }, []);
   return (
     <Card className={style.userProfile}>
       <Card.Meta
+        className={style.profileMeta}
         avatar={
           <Avatar shape="square" icon={<UserOutlined />}>
             admin

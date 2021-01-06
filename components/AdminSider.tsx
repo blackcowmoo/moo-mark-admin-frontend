@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { NextRouter, useRouter } from 'next/router';
 import { Layout, Menu } from 'antd';
@@ -12,7 +12,7 @@ import style from './adminSider.module.scss';
 
 const { Sider } = Layout;
 
-const AdminSider: React.FC = ({}) => {
+const AdminSider: React.FC = () => {
   const router: NextRouter = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   return (

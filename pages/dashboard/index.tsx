@@ -1,6 +1,4 @@
-import React from 'react';
-
-const DashBoardPage : React.FC =()=> {
+const DashBoardPage : React.FC = () => {
   return (
     <div>
         <h1>Hello Next.js 👋</h1>
@@ -102,8 +100,7 @@ const DashBoardPage : React.FC =()=> {
           content
         </p>
       </div>
-  )
-}
+  );
+};
 
 export default DashBoardPage;
-

@@ -1,6 +1,6 @@
 import 'antd/dist/antd.css';
 import Head from 'next/head';
-import type { AppProps /*, AppContext */ } from 'next/app';
+import type { AppProps /* , AppContext */ } from 'next/app';
 import AppLayout from '../components/AppLayout';
 
 const MooMarkAdmin = ({ Component, pageProps }: AppProps) => {
