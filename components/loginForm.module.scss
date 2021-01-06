@@ -1,0 +1,13 @@
+@import './adminSider.module.scss';
+
+.loginForm {
+  margin: 15px;
+  background-color: $menu-color;
+  label {
+    color: #FCFEFC;
+  }
+  .loginButton{
+    margin: 17px;
+    background:$button-color;
+  }
+}

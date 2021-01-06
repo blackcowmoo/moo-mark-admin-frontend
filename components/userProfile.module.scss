@@ -1,0 +1,18 @@
+@import './adminSider.module.scss';
+
+.userProfile{
+  background-color: $menu-color;
+  padding: 15px;
+  border: 0px;
+  .profileMeta{
+    padding-left: 32px;
+  }
+  .profileName{
+    color: $layout-font-color;
+  }
+  .profileButton{
+    margin: 17px;
+    background-color: $button-color;
+  }
+  
+}

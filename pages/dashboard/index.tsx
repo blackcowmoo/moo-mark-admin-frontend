@@ -1,9 +1,6 @@
-import React, { PureComponent } from 'react';
-
-export default class IndexPage extends PureComponent {
-  render() {
-    return (
-      <div>
+const DashBoardPage : React.FC = () => {
+  return (
+    <div>
         <h1>Hello Next.js 👋</h1>
         <p>
           ...
@@ -103,6 +100,7 @@ export default class IndexPage extends PureComponent {
           content
         </p>
       </div>
-    );
-  }
-}
+  );
+};
+
+export default DashBoardPage;

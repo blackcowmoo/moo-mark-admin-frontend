@@ -31,6 +31,6 @@
     "implicit-arrow-linebreak": ["off"],
     "arrow-body-style": ["off"],
     "react/prop-types": ["off"],
-    "react/react-in-jsx-scope": ["off"]
+    "react/react-in-jsx-scope": ["off"]  
   }
 }
