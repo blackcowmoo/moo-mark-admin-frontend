@@ -1,3 +1,5 @@
+import React from 'react';
+
 const DashBoardPage : React.FC = () => {
   return (
     <div>
