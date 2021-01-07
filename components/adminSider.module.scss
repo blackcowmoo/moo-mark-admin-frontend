@@ -26,9 +26,12 @@ $layout-font-color: #FCFEFC;
     left: 0px;
     .menuContainer {
       background-color: transparent;
-      .ant-menu-item.ant-menu-item-selected{
-        background-color: $selected-menu-color; /*Overriden property*/
+      .item{
+        &:hover{
+          background-color: $selected-menu-color;
+        }
       }
+      
     }
   }
   

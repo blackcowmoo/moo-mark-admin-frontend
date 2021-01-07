@@ -21,27 +21,27 @@ const AdminSider: React.FC = () => {
         <div className="logo" />
         {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
         <Menu theme="dark" className={style.menuContainer} mode="inline" selectedKeys={[router.pathname]}>
-          <Item key="/" icon={<HomeOutlined />}>
+          <Item key="/" className={style.item} icon={<HomeOutlined />}>
             <Link href="/">Home</Link>
           </Item>
 
-          <Item key="/dashboard" icon={<DashboardOutlined />}>
+          <Item key="/dashboard" className={style.item} icon={<DashboardOutlined />}>
             <Link href="/dashboard">DashBoard</Link>
           </Item>
 
-          <Item key="/user" icon={<UserOutlined />}>
+          <Item key="/user" className={style.item} icon={<UserOutlined />}>
             <Link href="/user">User</Link>
           </Item>
 
-          <Item key="/request" icon={<ApiOutlined />}>
+          <Item key="/request" className={style.item} icon={<ApiOutlined />}>
             <Link href="/request">API request</Link>
           </Item>
 
-          <Item key="/charts" icon={<BarChartOutlined />}>
+          <Item key="/charts" className={style.item} icon={<BarChartOutlined />}>
             <Link href="/charts">Charts</Link>
           </Item>
 
-          <Item key="/setting" icon={<SettingOutlined />}>
+          <Item key="/setting" className={style.item}icon={<SettingOutlined />}>
             <Link href="/setting">Setting</Link>
           </Item>
         </Menu>
