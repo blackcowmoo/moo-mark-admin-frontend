@@ -15,6 +15,8 @@ $layout-font-color: #FCFEFC;
   
 }
 
+
+
 .customlayout {
   .sider {
     background-color: $menu-color;
@@ -24,6 +26,9 @@ $layout-font-color: #FCFEFC;
     left: 0px;
     .menuContainer {
       background-color: transparent;
+      .ant-menu-item.ant-menu-item-selected{
+        background-color: $selected-menu-color; /*Overriden property*/
+      }
     }
   }
   

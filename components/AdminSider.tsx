@@ -11,7 +11,7 @@ import LoginForm from './LoginForm';
 import style from './adminSider.module.scss';
 
 const { Sider } = Layout;
-
+const { Item } = Menu;
 const AdminSider: React.FC = () => {
   const router: NextRouter = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -21,29 +21,29 @@ const AdminSider: React.FC = () => {
         <div className="logo" />
         {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
         <Menu theme="dark" className={style.menuContainer} mode="inline" selectedKeys={[router.pathname]}>
-          <Menu.Item className="custom" key="/" icon={<HomeOutlined />}>
+          <Item key="/" icon={<HomeOutlined />}>
             <Link href="/">Home</Link>
-          </Menu.Item>
+          </Item>
 
-          <Menu.Item key="/dashboard" icon={<DashboardOutlined />}>
+          <Item key="/dashboard" icon={<DashboardOutlined />}>
             <Link href="/dashboard">DashBoard</Link>
-          </Menu.Item>
+          </Item>
 
-          <Menu.Item key="/user" icon={<UserOutlined />}>
-          <Link href="/user">User</Link>
-          </Menu.Item>
+          <Item key="/user" icon={<UserOutlined />}>
+            <Link href="/user">User</Link>
+          </Item>
 
-          <Menu.Item key="/request" icon={<ApiOutlined />}>
+          <Item key="/request" icon={<ApiOutlined />}>
             <Link href="/request">API request</Link>
-          </Menu.Item>
+          </Item>
 
-          <Menu.Item key="/charts" icon={<BarChartOutlined />}>
+          <Item key="/charts" icon={<BarChartOutlined />}>
             <Link href="/charts">Charts</Link>
-          </Menu.Item>
+          </Item>
 
-          <Menu.Item key="/setting" icon={<SettingOutlined />}>
+          <Item key="/setting" icon={<SettingOutlined />}>
             <Link href="/setting">Setting</Link>
-          </Menu.Item>
+          </Item>
         </Menu>
       </Sider>
     </Layout>
