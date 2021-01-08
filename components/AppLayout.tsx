@@ -2,7 +2,7 @@ import { Layout } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 import AdminSider from './AdminSider';
 
-import style from './adminSider.module.scss';
+import style from '@styles/adminSider.module.scss';
 
 const { Footer, Content, Header } = Layout;
 

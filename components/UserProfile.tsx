@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { Card, Avatar, Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
-import style from './userProfile.module.scss';
+import style from '@styles/userProfile.module.scss';
 
 const UserProfile: React.FC<any> = ({ setIsLoggedIn }) => {
   const onLogOut = useCallback(() => {

@@ -8,7 +8,7 @@ import { BarChartOutlined, UserOutlined, HomeOutlined, SettingOutlined, Dashboar
 import UserProfile from './UserProfile';
 import LoginForm from './LoginForm';
 
-import style from './adminSider.module.scss';
+import style from '@styles/adminSider.module.scss';
 
 const { Sider } = Layout;
 const { Item } = Menu;

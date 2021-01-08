@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { Form, Input, Button } from 'antd';
 
-import style from './loginForm.module.scss';
+import style from '@styles/loginForm.module.scss';
 
 const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
   const [id, setId] = useState('');
