@@ -1,13 +1,27 @@
 @import './app.scss';
 
+
+
 .loginForm {
-  margin: 15px;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
   background-color: $menu-color;
   label {
     color: #FCFEFC;
   }
+  .loginInput{
+    margin: 3px;
+    width: 90%;
+    &:hover{
+      border-color: $selected-menu-color;
+    }
+  }
   .loginButton{
-    margin: 17px;
+    margin: 2px;
     background:$button-color;
+    border: 0px;
   }
 }

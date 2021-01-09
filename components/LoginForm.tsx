@@ -20,18 +20,18 @@ const LoginForm: React.FC<any> = ({ setIsLoggedIn }) => {
     setIsLoggedIn(true);
   }, [id, password]);
   return (
-    <Form className={style.loginForm} onFinish={onSubmitForm}>
+    <Form className={style.loginForm} layout="inline" onFinish={onSubmitForm}>
       <div>
         <label htmlFor="user-id">아이디</label>
         <br />
         <div>
-          <Input name="user-id" value={id} onChange={onChangeId} required />
+          <Input className={style.loginInput} name="user-id" value={id} onChange={onChangeId} required />
         </div>
       </div>
       <div>
         <label htmlFor="user-password">비밀번호</label>
         <br />
-        <Input name="user-password" type="password" value={password} onChange={onChangePassword} required />
+        <Input className={style.loginInput} name="user-password" type="password" value={password} onChange={onChangePassword} required />
       </div>
 
       <Button className={style.loginButton} type="primary" htmlType="submit" loading={false}>

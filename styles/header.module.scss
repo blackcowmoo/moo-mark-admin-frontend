@@ -1,0 +1,11 @@
+@import './app.scss';
+
+.header {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  background-color: $menu-color;
+}

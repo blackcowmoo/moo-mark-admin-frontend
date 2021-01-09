@@ -1,25 +1,19 @@
-import { useState } from 'react';
 import Link from 'next/link';
 import { NextRouter, useRouter } from 'next/router';
 import { Layout, Menu } from 'antd';
 
 import { BarChartOutlined, UserOutlined, HomeOutlined, SettingOutlined, DashboardOutlined, ApiOutlined } from '@ant-design/icons';
-
-import UserProfile from './UserProfile';
-import LoginForm from './LoginForm';
-
 import style from '@styles/adminSider.module.scss';
 
 const { Sider } = Layout;
 const { Item } = Menu;
 const AdminSider: React.FC = () => {
   const router: NextRouter = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  
   return (
     <Layout className={style.customlayout}>
       <Sider className={style.sider}>
-        <div className="logo" />
-        {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
+        <div className="logo"></div>
         <Menu theme="dark" className={style.menuContainer} mode="inline" selectedKeys={[router.pathname]}>
           <Item key="/" className={style.item} icon={<HomeOutlined />}>
             <Link href="/">Home</Link>
