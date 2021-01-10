@@ -1,22 +1,27 @@
 @import './app.scss';
 
 .userProfile{
+  margin: 0px;
   background-color: $menu-color;
   border: 0px;
-  display: flex;
-  flex-flow: wrap;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  height: 64px;
+  // display: flex;
+  // flex-flow: wrap;
+  // flex-direction: row;
+  // justify-content: flex-end;
+  // align-items: center;
+  span{
+    color:  $layout-font-color;
+  }
   .profileMeta{
     padding-left: 1px;
-  }
-  .profileName{
-    color: $layout-font-color;
   }
   .profileButton{
     margin: 0px;
     background-color: $button-color;
   }
-  
+  .subMenu{
+    color: $layout-font-color;
+    background-color: transparent;
+  }
 }

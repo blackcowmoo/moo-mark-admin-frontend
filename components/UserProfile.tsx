@@ -15,17 +15,18 @@ const UserProfile: React.FC<any> = ({ setIsLoggedIn }) => {
     console.log('menu!');
   }
   return (
-    <Menu key="user" mode="horizontal" onClick={handleClickMenu}>
+    <Menu className = {style.userProfile} key="user" mode="horizontal" onClick={handleClickMenu}>
         <SubMenu
           title={
             <Fragment>
-              <span style={{ color: '#999', marginRight: 4 }}>
+              <span style={{ marginRight: 4 }}>
                 Hi,
               </span>
               <span>Admin</span>
               <Avatar style={{ marginLeft: 8 }} icon={<UserOutlined />} />
             </Fragment>
           }
+          className = {style.subMenu}
         >
           <Menu.Item key="SignOut" onClick={onLogOut}>
             Sign out
