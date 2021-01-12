@@ -28,8 +28,8 @@ const UserProfile: React.FC<any> = ({ setIsLoggedIn }) => {
           }
           className = {style.subMenu}
         >
-          <Menu.Item key="SignOut" onClick={onLogOut}>
-            Sign out
+          <Menu.Item className={style.logOut} key="LogOut" onClick={onLogOut}>
+            Log out
           </Menu.Item>
         </SubMenu>
       </Menu>

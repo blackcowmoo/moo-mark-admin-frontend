@@ -20,8 +20,20 @@
     margin: 0px;
     background-color: $button-color;
   }
+  .avater{
+    margin-left: 8;
+  }
   .subMenu{
     color: $layout-font-color;
     background-color: transparent;
+    &:hover{
+      border-bottom: 2px solid $selected-menu-color;
+    }
+    .logOut{
+      &:hover{
+        border: $selected-menu-color;
+      }
+      
+    }
   }
 }
