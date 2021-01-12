@@ -9,7 +9,7 @@ const { Sider } = Layout;
 const { Item } = Menu;
 const AdminSider: React.FC = () => {
   const router: NextRouter = useRouter();
-  
+
   return (
     <Layout className={style.customlayout}>
       <Sider className={style.sider}>
