@@ -1,10 +1,10 @@
 import { Layout } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
+import style from '@styles/adminSider.module.scss';
 import AdminSider from './AdminSider';
+import AdminHeader from './AdminHeader';
 
-import style from './adminSider.module.scss';
-
-const { Footer, Content, Header } = Layout;
+const { Footer, Content } = Layout;
 
 const AdminLayout: React.FunctionComponent = ({ children }) => {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -12,15 +12,12 @@ const AdminLayout: React.FunctionComponent = ({ children }) => {
     <Layout className={style.appLayout}>
       <AdminSider />
       <Layout className="site-layout" style={{ marginLeft: 200, backgroundColor: '#DCCEAC' }}>
-        <Header className="site-layout-background" style={{ padding: '5px', backgroundColor: '#FCFEFC' }}>
-          {' '}
-          currentPage{' '}
-        </Header>
-        <Content style={{ padding: '5px', margin: '16px 16px', overflow: 'initial', backgroundColor: '#FCFEFC' }}> {children}</Content>
+        <AdminHeader/>
+        <Content style={{ display: 'flex', padding: '5px', margin: '16px 16px', overflow: 'initial', backgroundColor: '#FCFEFC' }}> {children}</Content>
         <Footer>
           mooMarkAdmin |{' '}
           <a href="https://github.com/blackcowmoo/moo-mark" rel="noreferrer noopener" target="_blank" >
-            <GithubOutlined />
+            mooMark<GithubOutlined />
           </a>
         </Footer>
       </Layout>

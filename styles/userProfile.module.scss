@@ -1,0 +1,39 @@
+@import './app.scss';
+
+.userProfile{
+  margin: 0px;
+  background-color: $menu-color;
+  border: 0px;
+  height: 64px;
+  // display: flex;
+  // flex-flow: wrap;
+  // flex-direction: row;
+  // justify-content: flex-end;
+  // align-items: center;
+  span{
+    color:  $layout-font-color;
+  }
+  .profileMeta{
+    padding-left: 1px;
+  }
+  .profileButton{
+    margin: 0px;
+    background-color: $button-color;
+  }
+  .avater{
+    margin-left: 8;
+  }
+  .subMenu{
+    color: $layout-font-color;
+    background-color: transparent;
+    &:hover{
+      border-bottom: 2px solid $selected-menu-color;
+    }
+    .logOut{
+      &:hover{
+        border: $selected-menu-color;
+      }
+      
+    }
+  }
+}

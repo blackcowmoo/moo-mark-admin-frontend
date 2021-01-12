@@ -10,12 +10,15 @@
   ],
   "ignorePatterns": ["dist/", "build/"],
   "settings": {
+    
     "import/resolver": {
+      "babel-module": {},
       "alias": {
         "map": [["@", "./"]],
-        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".scss"]
       }
     }
+    
   },
   "rules": {
     "max-len": ["error", { "code": 160 }],

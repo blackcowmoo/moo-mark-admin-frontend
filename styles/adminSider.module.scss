@@ -1,9 +1,4 @@
-$selected-menu-color: #13856C;
-$document-background : #FCFEFC;
-$page-background: #BBB2A3;
-$button-color: #DCCEAC;
-$menu-color: #1F1C1E;
-$layout-font-color: #FCFEFC;
+@import './app.scss';
 
 
 
@@ -15,6 +10,8 @@ $layout-font-color: #FCFEFC;
   
 }
 
+
+
 .customlayout {
   .sider {
     background-color: $menu-color;
@@ -24,6 +21,12 @@ $layout-font-color: #FCFEFC;
     left: 0px;
     .menuContainer {
       background-color: transparent;
+      .item{
+        &:hover{
+          background-color: $selected-menu-color;
+        }
+      }
+      
     }
   }
   
