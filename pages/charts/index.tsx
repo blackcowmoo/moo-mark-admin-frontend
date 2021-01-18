@@ -1,7 +1,13 @@
+import BarChart from './bar-chart';
+import DoughtnutChart from './doughnut-chart';
+import LineChart from './line-chart';
+
 const ChartsPage: React.FC = () => {
   return (
     <div>
-      api page
+      <BarChart/>
+      <DoughtnutChart/>
+      <LineChart/>
     </div>
   );
 };
