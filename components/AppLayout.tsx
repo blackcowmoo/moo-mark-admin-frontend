@@ -11,7 +11,7 @@ const AdminLayout: React.FunctionComponent = ({ children }) => {
   return (
     <Layout className={style.appLayout}>
       <AdminSider />
-      <Layout className="site-layout" style={{ marginLeft: 200, backgroundColor: '#DCCEAC' }}>
+      <Layout className={style.pageLayout} style={{ marginLeft: 200, backgroundColor: '#FCFEFC' }}>
         <AdminHeader/>
         <Content style={{ display: 'flex', padding: '5px', margin: '16px 16px', overflow: 'initial', backgroundColor: '#FCFEFC' }}> {children}</Content>
         <Footer>

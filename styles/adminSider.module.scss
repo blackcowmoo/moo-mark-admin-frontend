@@ -3,18 +3,18 @@
 
 
 .appLayout {
-  .site-layout{
+  .pageLayout{
     background-color: $document-background;
     background-color: black;
   }
-  
 }
 
 
 
 .customlayout {
   .sider {
-    background-color: $menu-color;
+    // background-color: $menu-color;
+    background-image: $sider-background;
     overflow: auto;
     height: 100vh;
     position: fixed;
