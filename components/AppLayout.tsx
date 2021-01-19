@@ -13,7 +13,7 @@ const AdminLayout: React.FunctionComponent = ({ children }) => {
       <AdminSider />
       <Layout className={style.pageLayout} style={{ marginLeft: 200, backgroundColor: '#FCFEFC' }}>
         <AdminHeader/>
-        <Content style={{ display: 'flex', padding: '5px', margin: '16px 16px', overflow: 'initial', backgroundColor: '#FCFEFC' }}> {children}</Content>
+        <Content style={{ padding: '5px', margin: '16px 16px', overflow: 'initial', backgroundColor: '#FCFEFC' }}> {children}</Content>
         <Footer>
           mooMarkAdmin |{' '}
           <a href="https://github.com/blackcowmoo/moo-mark" rel="noreferrer noopener" target="_blank" >
