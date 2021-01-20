@@ -1,9 +1,12 @@
-$selected-menu-color: #13856C;
+$selected-menu-color:#09203f;
+$menu-color: #537895;
+$sider-background: linear-gradient(to top, #09203f 0%, #537895 100%);
 $document-background : #FCFEFC;
-$page-background: #BBB2A3;
-$button-color: #DCCEAC;
-$menu-color: #1F1C1E;
-$layout-font-color: #FCFEFC;
+$page-background: #FCFEFC;
+$button-color: #09203f;
+$selected-font-color: white;
+$layout-font-color: black;
+
 
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{
   background: $selected-menu-color;
