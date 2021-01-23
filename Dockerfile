@@ -2,11 +2,18 @@ FROM node:12-alpine as BUILD_IMAGE
 
 WORKDIR /app
 
-COPY . .
+COPY package.json yarn.lock ./
 
 # install dependencies
-RUN yarn --production --frozen-lockfile
+RUN yarn --frozen-lockfile
+
+COPY . .
+
+# build
 RUN yarn build
+
+# remove dev dependencies
+RUN npm prune --production
 
 FROM node:12-alpine
 
