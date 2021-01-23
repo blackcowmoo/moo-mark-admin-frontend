@@ -5,9 +5,8 @@ WORKDIR /app
 COPY . .
 
 # install dependencies
-RUN yarn install --frozen-lockfile && yarn build
-
-RUN npm prune --production
+RUN yarn --production --frozen-lockfile
+RUN yarn build
 
 FROM node:12-alpine
 
