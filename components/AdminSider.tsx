@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { NextRouter, useRouter } from 'next/router';
 import { Layout, Menu } from 'antd';
-
-import { BarChartOutlined, UserOutlined, HomeOutlined, SettingOutlined, DashboardOutlined, ApiOutlined } from '@ant-design/icons';
+import { BarChartOutlined, UserOutlined, HomeOutlined, SettingOutlined, DashboardOutlined, ApiOutlined, RocketOutlined } from '@ant-design/icons';
 import style from '@styles/adminSider.module.scss';
+
 
 const { Sider } = Layout;
 const { Item } = Menu;
@@ -25,6 +25,10 @@ const AdminSider: React.FC = () => {
 
           <Item key="/user" className={style.item} icon={<UserOutlined />}>
             <Link href="/user">User</Link>
+          </Item>
+
+          <Item key="/post" className={style.item} icon={<RocketOutlined />}>
+            <Link href="/post">Posts</Link>
           </Item>
 
           <Item key="/request" className={style.item} icon={<ApiOutlined />}>

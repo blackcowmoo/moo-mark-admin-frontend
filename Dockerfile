@@ -1,21 +1,29 @@
-# FROM node:12 as builder
+FROM node:12-alpine as BUILD_IMAGE
 
-# COPY . /node
-# WORKDIR /node
+WORKDIR /app
 
-# RUN yarn && yarn build
+COPY package.json yarn.lock ./
 
-### Production
+# install dependencies
+RUN yarn --frozen-lockfile
+
+COPY . .
+
+# build
+RUN yarn build
+
+# remove dev dependencies
+RUN npm prune --production
+
 FROM node:12-alpine
 
-COPY . /node
-# COPY --from=builder /node/.next /node/.next
-COPY .next /node/.next
+WORKDIR /app
 
-WORKDIR /node
-RUN yarn --production
+# copy from build image
+COPY --from=BUILD_IMAGE /app/package.json ./package.json
+COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
+COPY --from=BUILD_IMAGE /app/.next ./.next
+COPY --from=BUILD_IMAGE /app/public ./public
 
 EXPOSE 3000
-STOPSIGNAL SIGINT
-
-ENTRYPOINT yarn start
+CMD ["yarn", "start"]
